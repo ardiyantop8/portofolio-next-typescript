@@ -1,3 +1,6 @@
+import Image from "next/image";
+import profilImg from "@/components/assets/img/profil1.jpeg";
+
 export function About() {
   return (
     <section id="about" className="py-20 px-4">
@@ -6,8 +9,15 @@ export function About() {
           About Me
         </h2>
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="w-48 h-48 mx-auto rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-            <span className="text-gray-500 dark:text-gray-400 text-sm">Photo</span>
+          <div className="w-48 h-48 mx-auto relative rounded-full overflow-hidden">
+            <Image
+              src={profilImg}
+              alt="Foto profil Ardiyantoputra"
+              fill
+              sizes="192px"
+              className="object-cover"
+              priority
+            />
           </div>
           <div>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
